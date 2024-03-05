@@ -14,7 +14,7 @@ type MenuSelected = {
 }
  
 type MenuAction = {
-  onSelectedMenu:() =>void
+  onSelectedMenu:(menu: SelectedMenu) =>void
 }
 
 const MenuSelectedContext = createContext<MenuSelected>({
