@@ -8,19 +8,19 @@ type Menu = { id: MenuIds; title: string };
 type SelectedMenu = {
   id:MenuIds
 }
-// Додати тип Menu Selected
+// Add the Menu Selected type
 type MenuSelected = {
    selectedMenu:SelectedMenu
 }
-// Додайте тип MenuAction
+// Add the MenuAction type
 type MenuAction = {
   onSelectedMenu:(menu: SelectedMenu) =>void
 }
-// Додати тип для children
+// Add the children type
 type PropsProvider = {
   children: React.ReactNode;
 };
-// Додайте вірний тип для меню
+// Add a valid type for the menu
 type PropsMenu = {
   menus:Menu[] 
 };
@@ -34,7 +34,7 @@ const MenuActionContext = createContext<MenuAction>({
 });
 
 function MenuProvider({ children }: PropsProvider) {
-  // Додати тип для SelectedMenu він повинен містити { id }
+  // Add type for SelectedMenu it should contain { id }
   const [selectedMenu, setSelectedMenu] = useState<SelectedMenu >({} as SelectedMenu);
 
   const menuContextAction = useMemo(

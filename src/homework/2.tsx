@@ -33,10 +33,10 @@ export function RequestComponent() {
 
   const startRequest = () => {
     requestDispatch({ type: 'START_REQUEST' });
-    // Імітуємо запит до сервера
+    // Simulate a request to the server
     setTimeout(() => {
       requestDispatch({ type: 'PENDING_REQUEST' });
-      // Імітуємо отримання відповіді від сервера
+      // We simulate receiving a response from the server
       setTimeout(() => {
         requestDispatch({ type: 'FINISH_REQUEST' });
       }, 2000);

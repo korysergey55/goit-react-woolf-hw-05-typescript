@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-// Опишіть Props
+// Describe the Props
 
 type Props = {
   children: React.ReactNode;
@@ -13,11 +13,11 @@ type OptionsProps = {
   root: Element | Document | null | undefined 
 }
 export function Observer({ children, onContentEndVisible }: Props) {
-  // Вкажіть правильний тип для useRef зверніть увагу, в який DOM елемент ми його передаємо
+  // Specify the correct type for useRef, pay attention to which DOM element we pass it to
   const endContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Вкажіть правильний тип для options, підказка, клас також можна вказувати як тип
+    // Specify the correct type for options
     const options:OptionsProps = {
       rootMargin: '0px',
       threshold: 1.0,
