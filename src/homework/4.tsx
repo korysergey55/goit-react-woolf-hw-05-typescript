@@ -60,7 +60,7 @@ function MenuProvider({ children }: PropsProvider) {
 }
 
 type PropsMenu = {
-  menus:Menu // Додайте вірний тип для меню
+  menus:Menu[] // Додайте вірний тип для меню
 };
 
 function MenuComponent({ menus }: PropsMenu) {
