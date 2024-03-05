@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-
 // Describe the Props
 
 type Props = {
@@ -7,18 +6,13 @@ type Props = {
   onContentEndVisible:()=>void
 }
 
-type OptionsProps = {
-  rootMargin: string;
-  threshold: number;
-  root: Element | Document | null | undefined 
-}
 export function Observer({ children, onContentEndVisible }: Props) {
   // Specify the correct type for useRef, pay attention to which DOM element we pass it to
   const endContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Specify the correct type for options
-    const options:OptionsProps = {
+    const options:IntersectionObserverInit = {
       rootMargin: '0px',
       threshold: 1.0,
       root: null,

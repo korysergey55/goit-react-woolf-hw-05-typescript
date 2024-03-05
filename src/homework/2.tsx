@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 
 type State ={
   isRequestInProgress: boolean;
-  requestStep: string
+  requestStep: "start" | "pending" | "finished" | "idle"
 }
 type Action = {
   type: string
@@ -49,9 +49,9 @@ export function RequestComponent() {
 
   return (
     <div>
-      <button onClick={startRequest}>Почати запит</button>
-      <button onClick={resetRequest}>Скинути запит</button>
-      <p>Стан запиту: {requestState.requestStep}</p>
+      <button onClick={startRequest}>Start Request</button>
+      <button onClick={resetRequest}>Reset Request</button>
+      <p>Request status: {requestState.requestStep}</p>
     </div>
   );
 }
